@@ -1,0 +1,1169 @@
+    /* === table of content  ===*/
+/*  
+    1. common css
+    2. heading css
+    3. menu css
+    4. banner css
+    5. story css
+    6. funfact css
+    7. service css
+    8. devices css
+    9. category css
+    10. message css
+    11. team css
+    12. company css
+    13. gallery css
+    14. epistle css
+    15. people css
+    16. blog css
+    17. map css
+    18. fotter css
+    19. copyright css
+    20. space css
+
+*/
+:root{
+    --primaryColor : #fce38a;
+    --primaryColor2 : #f38181;
+    --headingFont : 'Montserrat', sans-serif;
+    --subheadingFont : 'Kaushan Script', cursive;
+    --paragraphFont : 'Roboto', sans-serif;
+    --menuFont : 'Open Sans', sans-serif;
+    --cW : #fff;
+    --cB : #333333;
+    --cP : #999999;
+    --cI : #95e1d3;
+}
+/* common css start */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.clr{
+    clear: both;
+}
+.full-warpper{
+    width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+img{
+    vertical-align: middle;
+}
+/* common css ends */
+.m-30{
+    margin: 0 30px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+.mt-7{
+    margin-top: 7px;
+}
+.ml-30{
+    margin-left: 30px;
+}
+.pt{
+    padding-top: 100px;
+}
+.pb-3{
+    padding-bottom: 3px;
+}
+/* space css ends */
+.heading{
+    text-align: center;
+}
+.heading h4{
+    font-family: var(--subheadingFont);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--cB);
+    margin-bottom: 8px;
+}
+.heading h3{
+    font-family: var(--headingFont);
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--cB);
+    text-transform: uppercase;
+    position: relative;
+}
+.heading h3::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    left: 50%;
+    bottom: -40px;
+    position: absolute;
+    background: var(--primaryColor2);
+    transform: translateX(-50%);
+}
+.heading p{
+    font-family: var(--paragraphFont);
+    color: var(--cP);
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 90px;
+    padding: 0 120px;
+    line-height: 24px;
+}
+/* headimg css ends */
+.menu-bg{
+    position: absolute;
+    top: 29px;
+    left: 0;
+    z-index: 9999;
+}
+.menu-bg .menu .logo{
+    width: 100px;
+    float: left;
+}
+.menu-bg .menu .logo a img{
+    padding-left: 5px;
+}
+.menu-bg .menu .menu-list{
+    width: 1100px;
+    float: left;
+}
+.menu-bg .menu .menu-list ul{
+    float: right;
+}
+.menu-bg .menu .menu-list ul li{
+    float: left;
+}
+.menu-bg .menu .menu-list ul li a{
+    margin-left: 55px;
+    color: var(--cW);
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all linear 0.4s;
+   -webkit- transition: all linear 0.4s;
+}
+.menu-bg .menu .menu-list ul li:hover a{
+    color: var(--primaryColor);
+}
+.menu-bg .menu .menu-list ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--primaryColor);
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+.menu-bg .menu .menu-list ul li:hover a::after{
+    width: 100%;
+}
+.menu-bg .menu .menu-list ul li .active::after{
+    width: 100%;
+}
+.menu-bg .menu .menu-list ul li:nth-child(6) a::after{
+    width: 0;
+}
+.menu-bg .menu .menu-list ul li:nth-child(7) a::after{
+    width: 0;
+}
+/* headimg css ends */
+.banner-bg{
+    padding-top: 274px;
+    padding-bottom: 230px;
+    background: url(../Image/benner.png) no-repeat center / cover;
+    z-index: 1;
+    position: relative;
+}
+.banner-bg::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 84%;
+    z-index: -1;
+}
+.banner-bg .banner{
+    text-align: center;
+}
+.banner-bg .banner h3{
+    font-family: var(--subheadingFont);
+    font-weight: 400;
+    font-size: 72px;
+    color: var(--cW);
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+.banner-bg .banner h2{
+    font-family: (--headingFont);
+    font-weight: 700;
+    font-size: 90px;
+    color: var(--cW);
+    text-transform: uppercase;
+    width: 1170px;
+    line-height: 100px;
+    position: relative;
+}
+.banner-bg .banner h2::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+}
+.banner-bg .banner a{
+    font-family: (--headingFont);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--cW);
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    display: inline-block;
+    line-height: 34px;
+    padding: 0 30px;
+    margin-top: 140px;
+}
+.banner-bg .banner ul{
+    position: absolute;
+    left: 50%;
+    bottom: 92px;
+    transform: translateX(-50%);
+}
+.banner-bg .banner ul li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    float: left;
+    margin-left: 10px; 
+}
+.banner-bg .banner ul .active{
+    background: #ff2828;
+}
+/* banner css ends */
+.story-bg{
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+.story-bg .story .story-content{
+    padding-top: 100px;
+}
+.story-bg .story .story-content .story-iteam{
+    width: 380px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+.story-bg .story .story-content .story-iteam:hover{
+    -webkit-box-shadow: 7px 7px 4px 0px rgba(149,225,211,1);
+    -moz-box-shadow: 7px 7px 4px 0px rgba(149,225,211,1);
+    box-shadow: 7px 7px 4px 0px rgba(149,225,211,1);
+}
+.story-bg .story .story-content .story-iteam img{
+    width: 100%;
+    transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+.story-bg .story .story-content .story-iteam:hover img{
+    transform: scale(1.1);
+}
+.story-bg .story .story-content .story-iteam .iteam-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.81);
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+.story-bg .story .story-content .story-iteam:hover .iteam-overlay{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.story-bg .story .story-content .story-iteam .iteam-overlay i{
+    font-size: 90px;
+    color: var(--cW);
+    padding-top: 80px;
+}
+.story-bg .story .story-content .story-iteam .iteam-overlay h6{
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--cW);
+    text-transform: uppercase;
+}
+
+/* story css ends */
+.funfact-bg{
+    background: #95e1d3;
+    padding-top: 89px;
+    padding-bottom: 90px;
+}
+.funfact-bg .funfact{
+    
+}
+.funfact-bg .funfact .funfact-iteam{
+    width: 216px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.funfact-bg .funfact .funfact-iteam::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.funfact-bg .funfact .funfact-iteam h4{
+    font-family: var(--headingFont);
+    font-weight: 700;
+    font-size: 72px;
+    color: var(--cW);
+}
+.funfact-bg .funfact .funfact-iteam p{
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cW);
+    text-transform: uppercase;
+}
+
+/* funfact css ends */
+.service-bg{
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+.service-bg .service .heading h4{
+    text-transform: capitalize;
+}
+.service-bg .service .heading h3{
+    margin-bottom: 110px;
+}
+.service-bg .service .service-iteam1{
+    position: relative;
+}
+.service-bg .service .service-iteam1::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+}
+.service-bg .service .service-iteam1 .service-content{
+    width: 380px;
+    float: left;
+}
+.service-bg .service .service-iteam1 .service-content i{
+    font-size: 55px;
+    color: var(--cI);
+}
+.service-bg .service .service-iteam1 .service-content h6{
+    margin-left: 90px;
+    margin-top: -50px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cB);
+    text-transform: uppercase;
+}
+.service-bg .service .service-iteam1 .service-content p{
+    margin-left: 90px;
+    font-family: var(--paragraphFont);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--cP);
+    margin-top: 15px;
+    line-height: 24px;
+}
+.service-bg .service .service-iteam2{
+    padding-top: 100px;
+}
+.service-bg .service .service-iteam2 .service-content2{
+    width: 380px;
+    float: left;
+}
+.service-bg .service .service-iteam2 .service-content2 i{
+    font-size: 55px;
+    color: var(--cI);
+}
+.service-bg .service .service-iteam2 .service-content2 h6{
+    margin-left: 90px;
+    margin-top: -50px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cB);
+    text-transform: uppercase;
+}
+.service-bg .service .service-iteam2 .service-content2 p{
+    margin-left: 90px;
+    font-family: var(--paragraphFont);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--cP);
+    margin-top: 15px;
+    line-height: 24px;
+}
+
+/* service css ends */
+.devices-bg{
+    background: url(../Image/banner2.jpg) no-repeat center / cover;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+.devices-bg::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.devices-bg .devices .heading h4{
+    text-transform: capitalize;
+}
+.devices-bg .devices .heading h3{
+    margin-bottom: 85px;
+}
+.devices-bg .devices .device-content{
+    text-align: center;
+}
+.devices-bg .devices .device-content .image1{
+    position: relative;
+}
+.devices-bg .devices .device-content .image2{
+    position: absolute;
+    top: 55%;
+    right: 21%;
+    animation: animate 2s linear;
+    animation-fill-mode: backwards;
+}
+@keyframes animate{
+    0%{
+        top: 55%;
+        right: 10%;
+    }
+    100%{
+        top: 55%;
+        right: 21%;
+        transform: rotate(360deg);
+    }
+}
+
+/* devices css ends */
+.category-bg{
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+.category-bg .category .heading h4{
+    text-transform: capitalize;
+}
+.category-bg .category .category-content{
+    padding-top: 92px;
+    padding-bottom: 120px;
+}
+.category-bg .category .category-content .category-image{
+    float: left;
+    width: 570px;
+}
+.category-bg .category .category-content .category-image img{
+    width: 100%;
+}
+.category-bg .category .category-content .category-collapse{
+    float: left;
+    width: 600px;
+}
+.category-bg .category .category-content .category-collapse .ctg-heading{
+    border: 1px solid rgba(192, 192, 192, 0.5);
+}
+.category-bg .category .category-content .category-collapse .ctg-heading h6{
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.category-bg .category .category-content .category-collapse .ctg-heading h6 img{
+    padding: 15px;
+}
+.category-bg .category .category-content .category-collapse .ctg-heading h6 i{
+    float: right;
+    margin-right: 20px;
+    font-size: 30px;
+    margin-top: 13px;
+    color: #c0c0c0;
+    cursor: pointer;
+}
+.category-bg .category .category-content .category-collapse .ctg-team .body{
+    border: 1px solid rgba(192, 192, 192, 0.5);
+    border-top: none;
+}
+.category-bg .category .category-content .category-collapse .ctg-team .body p{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: #999999;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 17px;
+}
+
+/* category css ends */
+.message-bg{
+    background: #f8f8f8;
+}
+.message-bg .message{
+    padding-top: 120px;
+    padding-bottom: 95px;
+}
+.message-bg .message .message-image{
+    width: 274px;
+    float: left;
+}
+.message-bg .message .message-image img{
+    border: 3px solid #95E1D3;
+    padding: 40px;
+    margin-left: 100px;
+}
+.message-bg .message .message-image i{
+    font-size: 35px;
+    color: var(--cP);
+}
+.message-bg .message .message-text{
+    width: 896px;
+    float: left;
+}
+.message-bg .message .message-text p{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 24px;
+    line-height: 36px;
+    margin-right: 100px;
+}
+.message-bg .message .message-text i{
+    float: right;
+    margin-top: -55px;
+    font-size: 35px;
+    color: var(--cP);
+}
+.message-bg .message .message-text h4{
+    font-family: var(--subheadingFont);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--cB);
+    margin-left: 70px;
+    position: relative;
+}
+.message-bg .message .message-text h4::before{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+    position: absolute;
+    top: 50%;
+    left: -70px;
+}
+
+/* message css ends */
+.team-bg{
+    padding-top: 92px;
+    padding-bottom: 100px;
+}
+.team-bg .team .heading h4{
+    text-transform: capitalize;
+}
+.team-bg .team .heading p{
+    margin-bottom: 100px;
+}
+.team-bg .team .team-content .team-iteam{
+    width: 380px;
+    float: left;
+}
+.team-bg .team .team-content .team-iteam img{
+    width: 100%;
+    transition: all linear 0.4s;
+}
+.team-bg .team .team-content .team-iteam .team-image{
+    position: relative;
+}
+.team-bg .team .team-content .team-iteam .team-image .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+.team-bg .team .team-content .team-iteam .team-image:hover .overlay{
+    opacity: 1;
+}
+.team-bg .team .team-content .team-iteam .team-image .overlay ul{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.team-bg .team .team-content .team-iteam .team-image .overlay ul li{
+    float: left;
+    background: #fce38a;
+}
+.team-bg .team .team-content .team-iteam .team-image .overlay ul li i{
+    color: #f38181;
+    font-size: 17px;
+    padding: 15px;
+    border: 0.5px solid #f38181;
+    transition: all linear 0.4s;
+}
+.team-bg .team .team-content .team-iteam .team-image .overlay ul li:hover i{
+    color: #fff;
+    background: #f38181;
+}
+
+.team-bg .team .team-content .team-iteam .team-body{
+    text-align: center;
+}
+.team-bg .team .team-content .team-iteam .team-body h6{
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--cB);
+    padding-top: 40px;
+}
+.team-bg .team .team-content .team-iteam .team-body p{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* team css ends */
+.company-bg{
+    background: #f8f8f8;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.company-bg .company .company-conten .company-iteam{
+    width: 175px;
+    float: left;
+}
+.company-bg .company .company-conten .company-iteam .company-image img{
+    width: 110px;
+    height: 110px;
+    margin-left: 50px;
+    border-radius: 50%;
+}
+/* company css ends */
+.gallery-bg{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.gallery-bg .gallery .heading p{
+    margin-bottom: 100px;
+}
+.gallery-bg .conten-gallery{
+    width: 25%;
+    float: left;
+}
+.gallery-bg .conten-gallery img{
+    width: 100%;
+}
+.gallery-bg .conten-gallery .gallery{
+    position: relative;
+}
+.gallery-bg .conten-gallery .gallery .gallery-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding-top: 25%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s
+}
+.gallery-bg .conten-gallery .gallery:hover .gallery-overlay{
+    opacity: 1;
+}
+.gallery-bg .conten-gallery .gallery .gallery-overlay i{
+    color: #fff;
+    font-size: 25px;
+}
+.gallery-bg .conten-gallery .gallery .gallery-overlay h6{
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff; 
+    margin-top: 20px;
+}
+.gallery-bg .conten-gallery .gallery .gallery-overlay p{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* gallery css ends */
+.epistle-bg{
+    padding-bottom: 110px;
+}
+.epistle-bg .epistle .epistle-image{
+    width: 310px;
+    float: left;
+}
+.epistle-bg .epistle .epistle-image i{
+    font-size: 30px;
+    color: var(--cP);
+}
+.epistle-bg .epistle .epistle-image img{
+    width: 210px;
+    margin-left: 80px;
+}
+.epistle-bg .epistle .epistle-text{
+    width: 890px;;
+    float: left;
+}
+.epistle-bg .epistle .epistle-text i{
+    float: right;
+    font-size: 30px;
+    margin-top: -30px;
+    color: var(--cP);
+}
+.epistle-bg .epistle .epistle-text p{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 24px;
+    margin-left: 30px;
+    padding-right: 100px;
+    padding-top: 30px;
+}
+.epistle-bg .epistle .epistle-text h4{
+    font-family: var(--subheadingFont);
+    font-weight: 400;
+    color: var(--cB);
+    font-size: 24px;
+    position: relative;
+    padding-left: 90px;
+}
+.epistle-bg .epistle .epistle-text h4::before{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+}
+
+
+/* epistle css ends */
+.people-bg{
+    background: url(../Image/banner2.jpg) no-repeat center / cover;
+    padding-top: 112px;
+    padding-bottom: 130px;
+    position: relative;
+    z-index: 1;
+}
+.people-bg::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.people-bg .people .heading h4{
+    text-transform: capitalize;
+}
+.people-bg .people .people-iteam{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.people-bg .people .people-iteam .people-content{
+    width: 580px;
+    float: left;
+}
+.people-bg .people .people-iteam .people-content img{
+    margin-left: 40px;
+}
+.people-bg .people .people-iteam .people-content .people-body{
+    margin-left: 175px;
+    margin-top: -90px;
+}
+.people-bg .people .people-iteam .people-content .people-body h6{
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--cB);
+    padding-bottom: 10px;
+}
+.people-bg .people .people-iteam .people-content .people-body {
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 15px;
+    position: relative;
+    padding-bottom: 18px;
+}
+.people-bg .people .people-iteam .people-content .people-body span::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f38181;
+}
+.people-bg .people .people-iteam .people-content .people-body p{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 15px;
+    padding-top: 48px;
+}
+/* people css ends */
+.blog-bg{
+    padding-top: 100px;
+    padding-bottom: 115px;
+}
+.blog-bg .blog .heading h4{
+    text-transform: capitalize;
+}
+.blog-bg .blog .heading h3{
+    margin-bottom: 92px;
+}
+.blog-bg .blog .blog-content .blog-iteam{
+    width: 380px;
+    float: left;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-image img{
+    width: 100%;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-image{
+    position: relative;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-image .date{
+    width: 60px;
+    background: #95e1d3;
+    color: var(--cW);
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    top: 140px;
+    left: -10px;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-image .date h6{
+    font-size: 30px;
+    font-family: var(--headingFont);
+    font-weight: 700;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-image .date span{
+    fontfont-family: var(--paragraphFont);
+    font-weight: 400;
+    font-size: 15px;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-body{
+    border-bottom: 1px solid #e5e5e5;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-body h6{
+    font-family: var(--headingFont);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--cB);
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+.blog-bg .blog .blog-content .blog-iteam .blog-body p{
+    fontfont-family: var(--paragraphFont);
+    font-weight: 400;
+    color: var(--cP);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.blog-bg .blog .blog-content .blog-iteam  .blog-list ul{
+    padding-top: 10px;
+}
+.blog-bg .blog .blog-content .blog-iteam  .blog-list ul li{
+    float: left;
+    color: var(--cP);
+    padding-right: 10px;
+}
+.blog-bg .blog .blog-content .blog-iteam  .blog-list ul li i{
+    color: var(--cI);
+    padding-right: 5px;
+}
+
+/* blog css ends */
+.map-bg{
+    background: url(../Image/benner3.jpg) no-repeat center / cover;
+    padding-top: 57px;
+    padding-bottom: 57px;
+}
+.map-bg .map .map-content{
+    text-align: center;
+    color: #f38181;
+}
+.map-bg .map .map-content i{
+    font-size: 25px;
+    color: #f38181;
+}
+.map-bg .map .map-content h6{
+    font-size: 24px;
+    font-family: var(--headingFont);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 13px;
+    position: relative;
+    padding-bottom: 18px;
+}
+.map-bg .map .map-content h6::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* map css ends */
+.fotter-bg{
+    padding-top: 75px;
+    margin-bottom: 100px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo{
+    width: 480px;
+    float: left;
+    position: relative;
+}
+.fotter-bg .fotter .footer-content .fotter-logo img{
+    width: 135px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo .dami{
+    fontfont-family: var(--paragraphFont);
+    font-weight: 400;
+    color: var(--cP);
+    font-size: 14px;
+    padding-top: 43px;
+    padding-bottom: 50px;
+    line-height: 18px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo h4{
+    font-size: 14px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    color: var(--cB);
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 15px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo span{
+    font-size: 18px;
+    font-family: var(--headingFont);
+    font-weight: 700;
+    margin-right: 5px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo ul{
+    padding-bottom: 40px;
+    padding-top: 19px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo ul li{
+    float: left;
+    padding-left: 15px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo ul li a{
+    color: var(--cI);
+    font-size: 15px;
+}
+.fotter-bg .fotter .footer-content .fotter-logo ul li .active{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 15px;
+    padding-right: 11px;
+    padding-left: 0;
+}
+.fotter-bg .fotter .footer-content .fotter-logo .input{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.fotter-bg .fotter .footer-content .fotter-logo .input .sub_p{
+    width: 150px;
+    background: var(--cI);
+    padding: 13px 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--cW);
+    font-size: 20px;
+    font-family: var(--headingFont);
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.fotter-bg .fotter .footer-content .fotter-logo .input .added{
+    position: relative;
+}
+.fotter-bg .fotter .footer-content .fotter-logo .input input{
+    width: 380px;
+    padding: 15px;
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.fotter-bg .fotter .footer-content .fotter-link{
+    width: 370px;
+    float: left;
+}
+.fotter-bg .fotter .footer-content .fotter-link h4{
+    font-size: 14px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    color: var(--cB);
+    text-transform: uppercase;
+}
+.fotter-bg .fotter .footer-content .fotter-link ul li{
+    position: relative;
+    padding-top: 40px;
+}
+.fotter-bg .fotter .footer-content .fotter-link ul li img{
+    width: 120px;
+    position: absolute;
+}
+.fotter-bg .fotter .footer-content .fotter-link ul li p, span{
+    padding-left: 140px;
+}
+.fotter-bg .fotter .footer-content .fotter-link ul li p{
+    font-size: 12px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 18px;
+    margin-top: 15px;
+    color: var(--cP);
+}
+.fotter-bg .fotter .footer-content .fotter-link ul li span{
+    font-family: var(--paragraphFont);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cP);
+    font-size: 15px;
+}
+.fotter-bg .fotter .footer-content .footer-gallery{
+    width: 290px;
+    float: left;
+}
+.fotter-bg .fotter .footer-content .footer-gallery h4{
+    font-size: 14px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    color: var(--cB);
+    text-transform: uppercase;
+}
+.fotter-bg .fotter .footer-content .footer-gallery ul{
+    padding-top: 40px;
+}
+.fotter-bg .fotter .footer-content .footer-gallery ul li{
+    float: left;
+}
+.fotter-bg .fotter .footer-content .footer-gallery ul li a{
+    padding-left: 3px;
+}
+
+/* fotter css ends */
+.copy-bg{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #e5e5e5;
+}
+.copy-bg .copy{
+    text-align: center;
+}
+.copy-bg .copy p{
+    font-size: 14px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    color: var(--cB);
+}
+.copy-bg .copy a{
+    color: #f38181;
+}
+/* copyright css ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
